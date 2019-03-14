@@ -1,0 +1,12 @@
+{
+	"name": "kex-tpjsaa-io",
+	"url": "https://github.com/sh-dave/kex-tpjsaa-io.git",
+	"classPath": "src",
+	"dependencies": {
+		"haxe-format-tpjsaa": "",
+		"kex-atlas": "",
+		"kex-io": "",
+		"tink_json": ""
+	},
+	"license": "zlib"
+}
