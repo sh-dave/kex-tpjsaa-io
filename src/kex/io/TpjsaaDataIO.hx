@@ -12,8 +12,8 @@ class TpjsaaDataIO extends GenericIO<AtlasData> {
 		this.blobs = blobs;
 	}
 
-	override function onResolve( scope: String, path: String, file: String ) : Promise<AtlasData> {
-        return blobs.get(scope, path, file)
+	override function onResolve( url: String, ?opts: { ?scope: String } ) : Promise<AtlasData> {
+        return blobs.get(url, opts)
             .next(function( blob ) {
                 var data: AtlasData = tink.Json.parse(blob.toString());
                 return data;
